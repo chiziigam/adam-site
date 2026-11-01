@@ -12,7 +12,7 @@
   var OUTS = {
     s1: ['Maya is up. Dan sleeps on.', 'Dan is up. Maya sleeps on.'], s2: ['Theo has it.'], s3: ['Gran has been reminded.', 'Maya has been told.'],
     s4: ['Adam will tell Maya when she gets in.', 'Okay.'], s5: ['Calling Maya now.', 'Calling Dan now.'],
-    s6: ['The family has been told. Adam will get emergency help if they do not answer.', 'Okay. The family has been told.'], s7: ['Dan has bath time.', 'Maya has been asked.'], s8: ['Quiet mode on. Lights off.']
+    s6: ['No answer. Your family has been alerted.', 'Okay. The family has been told.'], s7: ['Dan has bath time.', 'Maya has been asked.'], s8: ['Quiet mode on. Lights off.']
   };
   // what lands on someone's phone when a reply is tapped: [name, text, tone]
   var TOAST = {
@@ -29,10 +29,10 @@
       narr: 'Dan is in the garden and cannot hear the door. Adam hears the knock and tells him.',
       from: 'Adam', msg: 'Someone is knocking at the front door.', chips: ['Tell Dan', 'Leave it'], pick: 0, done: 'Telling Dan. He is on his way.' },
     { img: 's6', time: '5:45 pm', head: 'A fall.', bg: '#282e3d', dark: true, at: 'fall', z: 1.4,
-      narr: 'If something is wrong, Adam gets the right person. Safety is built in, not the whole of Adam.',
-      from: 'Adam', msg: 'I heard a fall in the living room. Gran is not answering.', chips: ['Tell the family', 'She’s okay'], pick: 0, done: 'Telling the family. Adam will get emergency help if they do not answer.' },
+      narr: 'Adam asks if you are OK. With no answer, it alerts your family.',
+      from: 'Adam', msg: 'Are you OK?', chips: ['Tell the family', 'She’s okay'], pick: 0, done: 'No answer. Your family has been alerted.' },
     { img: 's1', time: '8:40 pm', head: 'Tell the family.', bg: '#0a0d15', dark: true, at: 'cot', z: 1.4,
-      narr: 'You ask Adam to tell someone. There is no app to open.',
+      narr: 'You ask Adam to tell someone. No screens to tap.',
       from: 'Adam', msg: 'I told Maya that June is awake.', chips: ['Thanks'], pick: 0, done: 'Maya has the message.' }
   ];
   // the house's outline in the render, as fractions of its width and height
