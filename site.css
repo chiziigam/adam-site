@@ -1692,9 +1692,14 @@ body.home .day-sticky { padding-top: 64px; }
 .can-arrow:hover { background: #ddd9d0; }
 .can-scroller { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 2px; margin: 0; padding: 0 2px 8px; scrollbar-width: none; }
 .can-scroller::-webkit-scrollbar { display: none; }
-.can-card { position: relative; flex: 0 0 min(460px, 82vw); min-height: 420px; margin: 0; padding: 48px 40px; border: 0; border-radius: 28px; background: #fff; box-shadow: none; display: flex; align-items: flex-end; scroll-snap-align: start; }
-.can-say { margin: 0; max-width: 11em; font-size: clamp(32px, 2.8vw, 44px); line-height: 1.12; letter-spacing: -0.035em; font-weight: 500; color: var(--ink); }
-.can .ev-plus, .ev-plus { position: absolute; top: 28px; right: 28px; align-self: auto; width: 32px; height: 32px; border: 0; border-radius: 50%; background: #eceae4; color: #3a3834; }
+.can-card { position: relative; flex: 0 0 min(460px, 82vw); height: 560px; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 28px; background: #f3f0e8; box-shadow: none; display: block; overflow: hidden; scroll-snap-align: start; }
+.can-vis { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.can-card.has-product .can-vis { inset: auto; left: 50%; top: 42%; width: 78%; height: 68%; transform: translate(-50%, -50%); object-fit: contain; }
+.can-card.has-photo::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 48%; background: linear-gradient(to top, rgba(18, 14, 10, 0.62), rgba(18, 14, 10, 0.08) 70%, transparent); }
+.can-say { position: absolute; left: 32px; right: 32px; bottom: 32px; z-index: 2; margin: 0; max-width: 11em; font-size: clamp(28px, 2.4vw, 40px); line-height: 1.12; letter-spacing: -0.035em; font-weight: 500; color: var(--ink); }
+.can-card.has-photo .can-say { color: #fff; }
+body.home .wk-sticky { padding-top: 72px; }
+.can .ev-plus, .ev-plus { position: absolute; top: 22px; right: 22px; z-index: 3; align-self: auto; width: 32px; height: 32px; border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.92); color: #3a3834; }
 .can .ev-plus::before, .ev-plus::before { width: 11px; height: 1.25px; margin: -0.6px 0 0 -5.5px; }
 .can .ev-plus::after, .ev-plus::after { width: 1.25px; height: 11px; margin: -5.5px 0 0 -0.6px; }
 .can .ev-plus:hover, .ev-plus:hover { background: #e2dfd6; border: 0; }
@@ -1708,6 +1713,6 @@ body.home .day-sticky { padding-top: 64px; }
 .hl-play:hover { background: #ddd9d0; border: 0; }
 .ev-dialog { border-radius: 28px; box-shadow: 0 24px 80px rgba(32, 30, 27, 0.18); }
 .ev-x { width: 32px; height: 32px; background: #eceae4; font-size: 18px; }
-@media (max-width: 800px) { .wk-logos { grid-template-columns: repeat(4, 1fr); gap: 28px 16px; } .can-card { min-height: 340px; padding: 36px 28px; } }
+@media (max-width: 800px) { .can-card { height: 440px; } .can-say { left: 24px; right: 24px; bottom: 24px; } }
 .ev-x:hover { background: var(--line); }
 @media (max-width: 720px) { .ev-card { min-height: 132px; } .ev-card h4 { font-size: 15px; } .ev-dialog { padding: 24px 20px 20px; } .ev-dialog h3 { font-size: 24px; } }
