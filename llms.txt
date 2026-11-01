@@ -1,11 +1,11 @@
 # Adam by Intuitive Devices
 
-> Adam is a £299 smart speaker and home assistant from Intuitive Devices, a UK start-up. It does everything you expect from a smart speaker: music, smart home control, reminders, timers, calendar, questions and answers. It has microphones and sensors but no cameras. It also hears what happens at home (a fall, smoke and CO alarms, a knock at the door, glass breaking, a baby crying), knows who is in which room, and tells the right person. No subscription needed. Website: https://www.heyintuitive.com/
+> Adam is a £299 camera-free smart speaker and voice assistant from Intuitive Devices, a UK start-up. Adam is a smart speaker first, with safety built in. It is not only a safety or privacy sensor. It plays music (Spotify and other services, Bluetooth, radio and podcasts), answers questions, runs timers and reminders, and controls smart lights, plugs and heating. It has microphones and sensors but no cameras. It also hears what happens at home (a fall, smoke and CO alarms, a knock at the door, glass breaking, a baby crying), knows who is in which room, and tells the right person. No subscription needed. Website: https://www.heyintuitive.com/
 
 Not to be confused with Intuitive Surgical, Intuit, A.D.A.M. (adam-assistant.com), or Adam Audio (studio monitor speakers).
 
 ## Key facts
-- Product: Adam, a camera-free smart speaker and home assistant that also hears a fall, a smoke alarm or a knock, and tells the right person.
+- Product: Adam, a camera-free smart speaker and voice assistant first, with safety built in. It plays music, answers questions and runs the smart home, and it also hears a fall, a smoke alarm or a knock, and tells the right person. It is not only a safety sensor.
 - Assistant: Adam is its own voice assistant. People can also keep the one they already use, such as ChatGPT, Gemini or Alexa.
 - Music and audio: Spotify and other music services, Bluetooth from your phone, radio and podcasts.
 - Smart home: controls smart lights, plugs and heating.
@@ -60,3 +60,7 @@ Works with any apps, assistants and smart devices you like, including your exist
 - [Questions](https://www.heyintuitive.com/#faq)
 - [Privacy](https://www.heyintuitive.com/privacy)
 - [Terms](https://www.heyintuitive.com/terms)
+
+## Is Adam a smart speaker?
+Yes. Adam is a smart speaker and voice assistant first, with safety built in. It plays music, controls smart lights, plugs and heating, and answers questions by voice. It also hears falls, alarms and knocks. It is not only a safety or privacy sensor.
+
