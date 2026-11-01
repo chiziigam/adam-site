@@ -3,8 +3,12 @@
   var bar = document.getElementById('top');
   if (!hero || !bar || !bar.querySelector('.top-buy')) return;
   // The header is sticky. Once the hero has scrolled out from under it, show Adam, the price and the waitlist.
-  var observer = new IntersectionObserver(function (entries) {
-    bar.classList.toggle('buy', !entries[0].isIntersecting);
-  }, { threshold: 0, rootMargin: '-72px 0px 0px 0px' });
+  function place() {
+    bar.classList.toggle('buy', hero.getBoundingClientRect().bottom <= bar.offsetHeight);
+  }
+  var observer = new IntersectionObserver(place, { threshold: [0, 1] });
   observer.observe(hero);
+  window.addEventListener('scroll', place, { passive: true });
+  window.addEventListener('resize', place);
+  place();
 })();
