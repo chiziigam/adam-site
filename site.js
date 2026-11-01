@@ -126,7 +126,7 @@
   if (!box) return;
   var L = [
     ['new parents.', '#d4501f', ['baby', 'milk', 'bed-double', 'heart']],
-    ['grandparents.', '#b83a66', ['phone', 'hand-heart', 'coffee', 'heart-pulse']],
+    ['the elderly.', '#b83a66', ['phone', 'hand-heart', 'coffee', 'heart-pulse']],
     ['busy families.', '#c98a00', ['calendar', 'shopping-basket', 'utensils', 'house']],
     ['flatmates.', '#3f6fd8', ['key-round', 'sofa', 'music-2', 'users']],
     ['pet owners.', '#a0522d', ['paw-print', 'dog', 'cat', 'bone']],
