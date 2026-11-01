@@ -1375,3 +1375,26 @@ h2.what-l { font-size: clamp(30px, 4.2vw, 56px); }
 }
 /* the tap hint sits under the speaker, never over it */
 #make .taphint { top: auto; bottom: 2%; left: 50%; }
+
+/* hero: the product with one control row under it (colours, Look inside); no floating hint pill */
+#make .product-hero:not(.open) { display: flex; flex-direction: column; }
+#make .product-hero:not(.open) .hero-view { order: 1; width: 100%; }
+#make .product-hero:not(.open) .hero-view > * { max-width: 100%; }
+#make .product-hero:not(.open) .hero-bar { order: 2; display: flex; align-items: center; justify-content: space-between; gap: 12px; height: auto; margin: 4px 0 0; padding: 0 2px; }
+#make .taphint { display: none; }
+.look-in { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 8px 14px 8px 16px; border: 1px solid var(--line); border-radius: 9999px; background: transparent; color: var(--ink); font: inherit; font-size: 14px; line-height: 20px; font-weight: 500; cursor: pointer; transition: border-color 200ms var(--ease), background-color 200ms var(--ease); }
+.look-in svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.look-in:hover { border-color: var(--ink); background: var(--card); }
+.look-in:focus-visible { outline: 2px solid var(--acc); outline-offset: 2px; }
+.product-hero.open .look-in { display: none; }
+@media (min-width: 1000px) {
+  #make.card-sec { padding-top: 56px; padding-bottom: 48px; }
+  #make > .wrap { min-height: 0; align-items: center; }
+  #make .product-hero:not(.open) .hero-bar { padding: 0 6%; }
+}
+#make .product-hero:not(.open) .hero-bar .colours { margin: 0; }
+@media (max-width: 999px) {
+  #make .hero-assembled { -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent), linear-gradient(to bottom, #000 78%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent), linear-gradient(to bottom, #000 78%, transparent); mask-composite: intersect; }
+  #make > .wrap > .product-wrap { margin-bottom: 20px; }
+}
+#make .product-hero:not(.open) .hero-bar .seg { display: none; }

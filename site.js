@@ -171,3 +171,9 @@
   ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(function (e) { window.addEventListener(e, skip, { passive: true }); });
   op.addEventListener('animationend', function (e) { if (e.target === op) { done(); off(); root.classList.add('opdone'); } });
 })();
+
+(function () {
+  // "Look inside" under the product opens the same inside view as tapping the speaker
+  var b = document.getElementById('lookIn'), open = document.getElementById('explodeBtn');
+  if (b && open) b.addEventListener('click', function () { open.click(); });
+})();
