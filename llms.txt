@@ -1,72 +1,20 @@
 # Adam by Intuitive Devices
 
-> Adam is a £299 camera-free AI smart speaker and assistant from Intuitive Devices. You just talk to it. No screens to tap. It plays music, messages your family, runs your home and gets real things done. Safety is built in. There are no cameras, and there is no subscription. Website: https://www.heyintuitive.com/
+> Adam is a camera-free AI smart speaker and assistant you just talk to. £299, no subscription. No cameras. https://www.heyintuitive.com/
 
-Not to be confused with Intuitive Surgical, Intuit, A.D.A.M. (adam-assistant.com), or Adam Audio (studio monitor speakers).
+Not to be confused with Intuitive Surgical, Intuit, A.D.A.M. (adam-assistant.com), or Adam Audio.
 
 ## Key facts
-- Product: Adam, a camera-free AI smart speaker and assistant you just talk to. It plays music, stays in touch with your family, runs the house and gets things done by voice. Safety is built in. There are no cameras.
-- Assistant: Adam is its own voice assistant and AI agent. It also works with assistants you already use, including ChatGPT, Gemini, Alexa, Claude Duet, Grok Bot, Muse, Instinct, Poke, Pally, Town and Wabi.
-- Music and audio: Spotify and other music services, Bluetooth from your phone, radio and podcasts. Works with Sonos.
-- Messages: Gmail, Outlook and WhatsApp. Sending needs your OK.
-- Calendar: Google Calendar, Apple Calendar and Outlook, plus reminders, routines and a morning briefing.
-- Smart home: controls smart lights, plugs and heating. Works with Philips Hue, Nest, Hive, IKEA, Apple Home, Google Home, Alexa, Dyson and Ring.
-- Also works with: Apple Health, WHOOP, Oura and Strava.
-- Price: £299 once, for everything in the box. No subscription.
+- A camera-free AI smart speaker and assistant. You just talk to it.
+- Music, messages, the house, and a morning briefing.
+- Works with the apps, assistants and smart devices you already use, including Spotify, Sonos, Gmail, Outlook, WhatsApp, Google and Apple calendars, Philips Hue, Nest, Hive, IKEA, Apple Home, Google Home, Alexa, Dyson, Ring, ChatGPT and Gemini.
+- A fall: Adam asks if you are OK, then alerts your family. Also hears smoke and CO alarms, a knock, glass breaking and a baby crying.
+- Price: £299 once. No subscription.
 - Colours: Charcoal, Chalk, Sand.
+- No cameras. The sound stays in the home.
 - Contact: support@heyintuitive.com
 
-## What you can say
-- "Adam, play something for dinner."
-- "Adam, keep this going."
-- "Adam, dim the lights and play something quiet."
-- "Adam, tell Maya I'll be late."
-- "Adam, what's on today?"
-- "Adam, any deliveries?"
-- "Adam, lights off downstairs."
-
-## Safety, built in
-Safety is built in.
-- A fall: Adam asks if you are OK. With no answer, it alerts your family. Saying "I'm fine" stops it. If Wi-Fi and the phone hotspot are both down, it sounds an alarm out loud.
-- Smoke and CO alarms, day and night
-- A knock at the door
-- Glass breaking
-- A baby crying
-- Who is in which room (the room, never an exact position)
-
-## What Adam does
-- Plays music, radio and podcasts, and can keep a mood going
-- Controls smart lights, plugs and heating
-- Answers questions, the weather, timers
-- Sends messages and emails, with your OK
-- Keeps the family calendar
-- A briefing each morning
-- Reminders and routines
-- Orders and bookings, with your OK
-- Watches prices and deliveries
-- Remembers what you tell it
-- Answers out loud
-
-## Privacy
-- No cameras. Nothing in Adam can see.
-- The sound itself never leaves your home. When you ask Adam something, only the text of your words goes online so the assistant can answer.
-- You can see, export or delete everything Adam keeps.
-- Anything that can't be undone (paying, booking, sending) needs your approval first.
-
-## Who it's for
-New parents, grandparents, busy families, flatmates, pet owners, carers, students, night owls, developers, and you.
-
-## A day with Adam
-- 7:05 am: "Adam, play something easy." Adam plays the morning music, then says today is PE and Theo's kit is by the dryer.
-- 11:30 am: a knock at the door. Dan is in the garden. Adam hears the knock and tells him.
-- 5:45 pm: a fall. Adam asks if you are OK and, with no answer, alerts your family.
-- 8:40 pm: "Tell Maya that June is awake." No screens to tap.
-
 ## Pages
-- [Home](https://www.heyintuitive.com/): product, questions, waitlist
-- [Questions](https://www.heyintuitive.com/#faq)
+- [Home](https://www.heyintuitive.com/)
 - [Privacy](https://www.heyintuitive.com/privacy)
 - [Terms](https://www.heyintuitive.com/terms)
-
-## Is Adam a voice assistant?
-Yes. Adam is a voice assistant and AI agent you just talk to. It plays music, messages your family, runs the calendar and the house, and gets things done by voice. Safety is built in. There are no cameras, and there is no subscription. It costs £299.
