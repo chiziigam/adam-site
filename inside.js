@@ -8,14 +8,14 @@
         { k: 'memory', name: 'Memory', side: 't', rows: ['2 GB LPDDR4', 'Holds your household’s memory on the device'] },
         { k: 'storage', name: 'Storage', side: 'l', rows: ['16 GB eMMC'] },
         { k: 'radio', name: 'Radio', side: 'r', rows: ['Wi-Fi 6, Bluetooth 5, Thread', 'Listens for smoke and CO alarms while the processor sleeps'] },
-        { k: 'radar', name: 'Presence radar', side: 'b', rows: ['24 GHz radar', 'Senses people without a camera'] },
+        { k: 'radar', name: 'Presence sensor', side: 'b', rows: ['Knows when someone is in the room', 'No camera, no image'] },
         { k: 'board', name: 'Circuit board', side: 'l', rows: ['Temperature, humidity and light sensors', 'Carries the chips and power'] },
         { k: 'driver', name: 'Speaker driver', side: 'l', rows: ['3 inch full-range', 'Class-D amplifier', 'Adam’s voice'] },
         { k: 'base', name: 'Base', side: 'r', rows: ['2 cm base in wood or metal, by finish', 'Power, mute switch and reset on the rear'] }
       ],
       plug: [
-        { k: 'housing', name: 'Front cover', side: 'r', rows: ['Radar window, status light and vents', 'One microphone pinhole'] },
-        { k: 'board', name: 'Sensor board', side: 'l', rows: ['Wi-Fi 6, Bluetooth 5, Thread', '24 GHz radar', 'Temperature, humidity and light'] },
+        { k: 'housing', name: 'Front cover', side: 'r', rows: ['Sensor window, status light and vents', 'One microphone pinhole'] },
+        { k: 'board', name: 'Sensor board', side: 'l', rows: ['Wi-Fi 6, Bluetooth 5, Thread', 'Presence sensor', 'Temperature, humidity and light'] },
         { k: 'module', name: 'Power module', side: 'r', rows: ['5 V, isolated AC to DC'] },
         { k: 'pins', name: 'Back shell and pins', side: 'l', rows: ['UK three-pin', 'Fits a standard wall socket'] }
       ]

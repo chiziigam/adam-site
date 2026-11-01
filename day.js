@@ -5,7 +5,7 @@
   var SMALL = Math.min(window.innerWidth, window.innerHeight) < 820;
   // where each moment happens in the cutaway render (render/cutaway.py writes these to cut_pts.json)
   var P = {
-    kit: [0.70, 0.66], door: [0.155, 0.6889], hob: [0.6849, 0.6946], fall: [0.441, 0.7712], cot: [0.7388, 0.5153]
+    kit: [0.70, 0.66], door: [0.155, 0.6889], hob: [0.6849, 0.6946], fall: [0.4002, 0.7726], cot: [0.7388, 0.5153]
   };
   var OUTS = {
     s1: ['Maya is up. Dan sleeps on.', 'Dan is up. Maya sleeps on.'], s2: ['Theo has it.'], s3: ['Gran has been reminded.', 'Maya has been told.'],
@@ -43,7 +43,7 @@
   var cam = document.createElement('div'); cam.className = 'day-cam day-strip'; scroller.appendChild(cam);
   var panels = S.map(function () { var d = document.createElement('div'); d.className = 'day-panel'; cam.appendChild(d); return d; });
   var imgs = S.map(function (s, i) {
-    var im = document.createElement('img'); im.src = (SMALL ? s.img.replace(/^\.\.\//, '../sm/').replace(/^s/, 'sm/s') : s.img) .replace(/^/, 'day/story/') + '.webp?v=9'; im.className = 'day-img'; im.decoding = 'async'; if (i) im.loading = 'lazy';
+    var im = document.createElement('img'); im.src = (SMALL ? s.img.replace(/^\.\.\//, '../sm/').replace(/^s/, 'sm/s') : s.img) .replace(/^/, 'day/story/') + '.webp?v=10'; im.className = 'day-img'; im.decoding = 'async'; if (i) im.loading = 'lazy';
     im.alt = i === 0 ? 'A cutaway of a two-storey family home, with Adam on the living-room sideboard' : ''; if (i) im.setAttribute('aria-hidden', 'true');
     panels[i].appendChild(im); return im;
   });

@@ -1358,3 +1358,20 @@ h2.what-l { font-size: clamp(30px, 4.2vw, 56px); }
 .hs-room { margin: clamp(24px, 3vw, 36px) 0 0; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.45; color: var(--ink); max-width: 52ch; }
 .hs-also { margin: clamp(40px, 5vw, 72px) 0 0; max-width: 62ch; font-size: clamp(17px, 1.35vw, 20px); line-height: 1.6; color: #4f4b44; text-wrap: pretty; }
 .hs-also span { display: block; margin-bottom: 6px; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.2; letter-spacing: -0.025em; font-weight: 500; color: var(--ink); }
+
+/* the edge fade on the day scenes as gradients: a huge blurred inset shadow drew in tiles and left seams on phones */
+.day-stage::after { box-shadow: none; transition: none; background: linear-gradient(to right, var(--dbg), transparent 14%, transparent 86%, var(--dbg)), linear-gradient(to bottom, var(--dbg), transparent 12%, transparent 80%, var(--dbg)); opacity: 0.85; }
+
+/* phones: the speaker first, above the headline, with the tap hint below it rather than over it */
+@media (max-width: 999px) {
+  #make > .wrap > .product-wrap { order: -1; margin: 0 0 8px; }
+  #make.card-sec { padding-top: 8px; }
+  #make .product-hero:not(.open) .hero-view { aspect-ratio: 1600 / 760; }
+  #make .hero-assembled { object-fit: cover; object-position: 50% 62%; -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent); }
+  #make .product-hero:not(.open) .hero-bar { height: 44px; margin-bottom: 0; }
+  #make .taphint { top: auto; bottom: -2%; left: 50%; }
+  #make .peek-ring { top: 50%; }
+  #colourPicker { margin-top: -4px; }
+}
+/* the tap hint sits under the speaker, never over it */
+#make .taphint { top: auto; bottom: 2%; left: 50%; }
