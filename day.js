@@ -43,7 +43,7 @@
   var cam = document.createElement('div'); cam.className = 'day-cam day-strip'; scroller.appendChild(cam);
   var panels = S.map(function () { var d = document.createElement('div'); d.className = 'day-panel'; cam.appendChild(d); return d; });
   var imgs = S.map(function (s, i) {
-    var im = document.createElement('img'); im.src = (SMALL ? s.img.replace(/^\.\.\//, '../sm/').replace(/^s/, 'sm/s') : s.img) .replace(/^/, 'day/story/') + '.webp?v=10'; im.className = 'day-img'; im.decoding = 'async'; if (i) im.loading = 'lazy';
+    var im = document.createElement('img'); im.src = (SMALL ? s.img.replace(/^\.\.\//, '../sm/').replace(/^s/, 'sm/s') : s.img) .replace(/^/, 'day/story/') + '.webp?v=11'; im.className = 'day-img'; im.decoding = 'async'; if (i) im.loading = 'lazy';
     im.alt = i === 0 ? 'A cutaway of a two-storey family home, with Adam on the living-room sideboard' : ''; if (i) im.setAttribute('aria-hidden', 'true');
     panels[i].appendChild(im); return im;
   });
