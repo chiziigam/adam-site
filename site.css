@@ -1317,17 +1317,8 @@ h2.what-l { font-size: clamp(30px, 4.2vw, 56px); }
 @media (max-width: 720px) { .day-card .dc-msg { font-size: 14px; line-height: 20px; } .day-card .dc-done { font-size: 13px; line-height: 18px; } .day-stage > .day-card { width: min(250px, calc(100vw - 80px)); } .day-note { font-size: 14px; } }
 
 
-@media (min-width: 721px) { .day-strip .day-img { -webkit-mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, #000 72%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, #000 72%, transparent); mask-composite: intersect; } }
 
-/* a day with Adam on wide screens: the house fills the stage, the words sit in the sky beside the roof */
-@media (min-width: 1100px) {
-  .day-foot { top: 0; display: block; padding: 0; background: none; }
-  .day-narr { position: absolute; left: var(--pad); top: 150px; max-width: 290px; font-size: 19px; line-height: 1.45; }
-  .day-ticks { position: absolute; left: var(--pad); right: var(--pad); bottom: 44px; }
-  .day-note { position: absolute; left: var(--pad); bottom: 16px; }
-  .day-stage > .day-card { left: auto; right: var(--pad); top: 150px; bottom: auto; }
-  .day-strip .day-img { -webkit-mask-image: none; mask-image: none; }
-}
+
 
 /* what Adam hears: one typographic row per sound and what Adam does about it */
 .hearsec { padding: clamp(56px, 8vw, 112px) 0 clamp(48px, 7vw, 96px); }
@@ -1398,3 +1389,5 @@ h2.what-l { font-size: clamp(30px, 4.2vw, 56px); }
   #make > .wrap > .product-wrap { margin-bottom: 20px; }
 }
 #make .product-hero:not(.open) .hero-bar .seg { display: none; }
+/* desktop: Adam's message sits top right, under the time, clear of the people */
+@media (min-width: 900px) { .day-stage > .day-card { left: auto; right: var(--pad); top: 150px; bottom: auto; } }

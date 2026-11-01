@@ -7,6 +7,8 @@
   var P = {
     kit: [0.70, 0.66], door: [0.155, 0.6889], hob: [0.6849, 0.6946], fall: [0.3947, 0.7542], cot: [0.7388, 0.5153]
   };
+  // wider screens frame the room where it happens together with whoever Adam tells
+  var PD = { kit: [0.66, 0.6], door: [0.26, 0.6], hob: [0.62, 0.56], fall: [0.42, 0.62], cot: [0.62, 0.6] };
   var OUTS = {
     s1: ['Maya is up. Dan sleeps on.', 'Dan is up. Maya sleeps on.'], s2: ['Theo has it.'], s3: ['Gran has been reminded.', 'Maya has been told.'],
     s4: ['Adam will tell Maya when she gets in.', 'Okay.'], s5: ['Calling Maya now.', 'Calling Dan now.'],
@@ -37,7 +39,7 @@
       from: 'Adam', msg: 'June is crying in the nursery.', chips: ['Maya', 'Dan'], pick: 0, done: 'Telling Maya. It is her turn tonight.' }
   ];
   // the house's outline in the render, as fractions of its width and height
-  var WIDE = 1100, HOUSE = { l: 0.07, r: 0.97, t: 0.145, b: 0.81 };
+  var WIDE = Infinity, HOUSE = { l: 0.07, r: 0.97, t: 0.145, b: 0.81 };
   var sec = track.parentNode, stage = document.getElementById('dayStage');
   var scroller = document.createElement('div'); scroller.className = 'day-scroller'; scroller.tabIndex = 0; scroller.setAttribute('role', 'group'); scroller.setAttribute('aria-label', 'A day at home. Swipe or scroll sideways.'); stage.appendChild(scroller);
   var cam = document.createElement('div'); cam.className = 'day-cam day-strip'; scroller.appendChild(cam);
@@ -86,7 +88,8 @@
         }
         im.style.width = w + 'px'; im.style.height = h + 'px';
         im.style.left = l + 'px'; im.style.top = t + 'px';
-        if (im === imgs[i]) geo['spot' + i] = [l + f.z * f.x * geo.iw, t + f.z * f.y * geo.ih];
+        // the ring goes on the event itself, even when the frame is centred elsewhere
+        if (im === imgs[i]) { var ev = P[S[i].at]; geo['spot' + i] = [l + f.z * ev[0] * geo.iw, t + f.z * ev[1] * geo.ih]; }
         im.style.transformOrigin = (f.x * 100) + '% ' + (f.y * 100) + '%';
       });
     });
@@ -102,7 +105,10 @@
   layout(); window.addEventListener('resize', layout);
 
   function ease(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
-  function foc(i) { var p = P[S[i].at]; return { x: p[0], y: p[1], z: geo.W < 720 ? Math.max(1.3, S[i].z * 0.5) : S[i].z }; }
+  function foc(i) {
+    if (geo.W < 720) { var p = P[S[i].at]; return { x: p[0], y: p[1], z: Math.max(1.3, S[i].z * 0.5) }; }
+    var d = PD[S[i].at] || P[S[i].at]; return { x: d[0], y: d[1], z: 1.9 };
+  }
   function mix(a, b, t) { return { x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t, z: a.z + (b.z - a.z) * t }; }
 
   function show(i) {
