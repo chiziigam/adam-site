@@ -19,13 +19,9 @@
   function preloadColour(name) {
     if (name === cur) return;
     var p = PREFIX[name];
-    var first = [p + 'frames/box.webp?v=15', p + 'inside/speaker_shell.webp', p + 'inside/speaker_panel.webp'];
+    var first = [p + 'frames/box.webp?v=15'];
     first.forEach(preload);
     var rest = [];
-    ['panel', 'shell', 'processor', 'memory', 'storage', 'radio', 'radar', 'board', 'driver', 'base'].forEach(function (k) {
-      rest.push(p + 'inside/speaker_' + k + '.webp', p + 'inside/speaker_' + k + '_line.webp');
-    });
-    ['panel', 'shell', 'processor', 'memory', 'board', 'radio', 'radar', 'driver', 'base'].forEach(function (k) { rest.push(p + 'inside/macro_' + k + '.webp'); });
     ['night', 'morning', 'day', 'evening'].forEach(function (k) { rest.push(p + 'day/' + k + '.webp?v=3'); });
     var run = function () { rest.forEach(preload); };
     if (window.requestIdleCallback) window.requestIdleCallback(run, { timeout: 2500 }); else setTimeout(run, 600);

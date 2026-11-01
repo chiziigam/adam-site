@@ -12,7 +12,7 @@
   var OUTS = {
     s1: ['Maya is up. Dan sleeps on.', 'Dan is up. Maya sleeps on.'], s2: ['Theo has it.'], s3: ['Gran has been reminded.', 'Maya has been told.'],
     s4: ['Adam will tell Maya when she gets in.', 'Okay.'], s5: ['Calling Maya now.', 'Calling Dan now.'],
-    s6: ['Calling 999. Maya and Dan have been told.', 'Okay. Maya and Dan have been told.'], s7: ['Dan has bath time.', 'Maya has been asked.'], s8: ['Quiet mode on. Lights off.']
+    s6: ['The family has been told. Adam will get emergency help if they do not answer.', 'Okay. The family has been told.'], s7: ['Dan has bath time.', 'Maya has been asked.'], s8: ['Quiet mode on. Lights off.']
   };
   // what lands on someone's phone when a reply is tapped: [name, text, tone]
   var TOAST = {
@@ -22,21 +22,18 @@
     s6: [['Maya', 'Gran has fallen in the living room and is not answering.', 'red'], ['Maya', 'Gran is okay. Adam will keep listening.']], s7: [['Dan', 'June’s bath is yours tonight.'], ['Maya', 'Can you take June’s bath?']], s8: [null]
   };
   var S = [
-    { img: 's2', time: '6:50 am', head: 'Kit day.', bg: '#4d5b71', dark: true, at: 'kit', z: 1.4,
-      narr: 'Adam remembers what the family has told it, and says it at the moment it matters.',
-      from: 'Adam', msg: 'Today is PE. Theo’s kit is by the dryer.', chips: ['Thanks'], pick: 0, done: 'Reminding Theo.' },
+    { img: 's2', time: '7:05 am', head: 'Put something on.', bg: '#4d5b71', dark: true, at: 'kit', z: 1.4,
+      narr: 'You just say it. Adam plays the morning music, then tells you what the day holds.',
+      from: 'Adam', msg: 'Playing something easy. Today is PE. Theo’s kit is by the dryer.', chips: ['Thanks'], pick: 0, done: 'Music on. Theo has been reminded.' },
     { img: 's4', time: '11:30 am', head: 'A knock at the door.', bg: '#616e80', dark: true, at: 'door', z: 1.4,
       narr: 'Dan is in the garden and cannot hear the door. Adam hears the knock and tells him.',
       from: 'Adam', msg: 'Someone is knocking at the front door.', chips: ['Tell Dan', 'Leave it'], pick: 0, done: 'Telling Dan. He is on his way.' },
-    { img: 's5', time: '2:15 pm', head: 'The smoke alarm.', bg: '#616e80', dark: true, at: 'hob', z: 1.4,
-      narr: 'Adam always listens for smoke and CO alarms, day and night.',
-      from: 'Adam', msg: 'The smoke alarm is sounding in the kitchen.', chips: ['Call Dan', 'Call Maya'], pick: 0, done: 'Dan has headphones on upstairs. Calling him now.' },
     { img: 's6', time: '5:45 pm', head: 'A fall.', bg: '#282e3d', dark: true, at: 'fall', z: 1.4,
-      narr: 'Adam listens for the sounds that mean something is wrong, and gets the right person there on time.',
-      from: 'Adam', msg: 'I heard a fall in the living room. Gran is not answering.', chips: ['Tell Maya and Dan', 'She’s okay'], pick: 0, done: 'Telling Maya and Dan. Calling 999 if they do not answer.' },
-    { img: 's1', time: '9:40 pm', head: 'June is awake.', bg: '#0a0d15', dark: true, at: 'cot', z: 1.4,
-      narr: 'Maya and Dan are downstairs with the TV on. Adam hears June upstairs and tells them.',
-      from: 'Adam', msg: 'June is crying in the nursery.', chips: ['Maya', 'Dan'], pick: 0, done: 'Telling Maya. It is her turn tonight.' }
+      narr: 'If something is wrong, Adam gets the right person. Safety is built in, not the whole of Adam.',
+      from: 'Adam', msg: 'I heard a fall in the living room. Gran is not answering.', chips: ['Tell the family', 'She’s okay'], pick: 0, done: 'Telling the family. Adam will get emergency help if they do not answer.' },
+    { img: 's1', time: '8:40 pm', head: 'Tell the family.', bg: '#0a0d15', dark: true, at: 'cot', z: 1.4,
+      narr: 'You ask Adam to tell someone. There is no app to open.',
+      from: 'Adam', msg: 'I told Maya that June is awake.', chips: ['Thanks'], pick: 0, done: 'Maya has the message.' }
   ];
   // the house's outline in the render, as fractions of its width and height
   var WIDE = Infinity, HOUSE = { l: 0.07, r: 0.97, t: 0.145, b: 0.81 };
