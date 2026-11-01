@@ -82,6 +82,7 @@
         } else {
           w = geo.iw * f.z; h = geo.ih * f.z;
           l = Math.min(0, Math.max(geo.W - w, geo.W / 2 - f.z * f.x * geo.iw)); t = Math.min(0, geo.H / 2 - f.z * f.y * geo.ih);
+          if (geo.W < 820 && t + h < geo.H) t = geo.H - h;
         }
         im.style.width = w + 'px'; im.style.height = h + 'px';
         im.style.left = l + 'px'; im.style.top = t + 'px';
@@ -103,7 +104,7 @@
 
   function ease(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
   function foc(i) {
-    if (geo.W < 720) { var p = P[S[i].at]; return { x: p[0], y: p[1], z: Math.max(1.3, S[i].z * 0.5) }; }
+    if (geo.W < 820) { var p = P[S[i].at]; return { x: p[0], y: p[1], z: Math.max(geo.W / geo.iw, geo.H / geo.ih) * 1.28 }; }
     var d = PD[S[i].at] || P[S[i].at]; return { x: d[0], y: d[1], z: 1.9 };
   }
   function mix(a, b, t) { return { x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t, z: a.z + (b.z - a.z) * t }; }

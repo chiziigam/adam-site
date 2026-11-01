@@ -1,6 +1,7 @@
 (function () {
   var ORDER = ['black', 'white', 'sandstone'];
   var LABELS = { sandstone: 'Sand', black: 'Charcoal', white: 'Chalk' };
+  var HERO = { sandstone: 'closer/adam-sand.webp', white: 'closer/adam-chalk.webp', black: 'closer/adam-charcoal.webp' };
   var PREFIX = { sandstone: '', black: 'colorways/black/', white: 'colorways/white/' };
   var KEY = 'adam-colour';
   var cur = 'sandstone';
@@ -19,7 +20,7 @@
   function preloadColour(name) {
     if (name === cur) return;
     var p = PREFIX[name];
-    var first = [p + 'frames/box.webp?v=15'];
+    var first = [HERO[name]];
     first.forEach(preload);
     var rest = [];
     ['night', 'morning', 'day', 'evening'].forEach(function (k) { rest.push(p + 'day/' + k + '.webp?v=3'); });
@@ -52,7 +53,7 @@
       b.tabIndex = on ? 0 : -1;
     });
     var box = document.querySelector('[data-box]');
-    if (box) box.src = framesUrl('box.webp') + '?v=15';
+    if (box) { box.src = HERO[cur]; box.alt = 'The Adam speaker, in ' + LABELS[cur]; }
     if (changed) window.dispatchEvent(new CustomEvent('adam-colour-change', { detail: cur }));
   }
 

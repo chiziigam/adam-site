@@ -19,6 +19,34 @@
       if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
       if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
     });
+    var dots = document.getElementById('canDots');
+    if (dots) {
+      var cards = scroller.querySelectorAll('.can-card');
+      Array.prototype.forEach.call(cards, function (card, i) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Card ' + (i + 1));
+        if (!i) b.setAttribute('aria-current', 'true');
+        b.addEventListener('click', function () {
+          var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          scroller.scrollTo({ left: card.offsetLeft, behavior: reduce ? 'auto' : 'smooth' });
+        });
+        dots.appendChild(b);
+      });
+      function sync() {
+        var list = scroller.querySelectorAll('.can-card'), best = 0, dist = 1e9, edge = scroller.getBoundingClientRect().left;
+        Array.prototype.forEach.call(list, function (card, n) {
+          var d = Math.abs(card.getBoundingClientRect().left - edge);
+          if (d < dist) { dist = d; best = n; }
+        });
+        Array.prototype.forEach.call(dots.children, function (b, n) {
+          if (n === best) b.setAttribute('aria-current', 'true');
+          else b.removeAttribute('aria-current');
+        });
+      }
+      scroller.addEventListener('scroll', sync, { passive: true });
+      sync();
+    }
   }
   var buttons = document.querySelectorAll('.ev-plus');
   if (!buttons.length || !window.HTMLDialogElement) return;
