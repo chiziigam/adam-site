@@ -13,7 +13,7 @@
   var prog = reduce ? 1 : 0, running = false;
   function at(el) { return 0.04 + 0.66 * words.indexOf(el) / (words.length - 1); }
   var loops = Array.prototype.slice.call(root.querySelectorAll('.wk-loop')).map(function (el) {
-    var fs = parseFloat(getComputedStyle(el).fontSize) || 32, size = Math.round(Math.max(18, Math.min(28, fs * 0.5)));
+    var size = window.innerWidth >= 800 ? 36 : 30;
     var sv = document.createElementNS(NS, 'svg'); sv.setAttribute('class', 'wk-path'); sv.setAttribute('aria-hidden', 'true');
     var pa = document.createElementNS(NS, 'path'); sv.appendChild(pa); el.insertBefore(sv, el.firstChild);
     var items = SETS[el.dataset.set].map(function (x) {
@@ -28,7 +28,9 @@
       var w = L.el.querySelector('b').offsetWidth, h = (parseFloat(getComputedStyle(L.el).fontSize) || 30) * 1.1;
       if (L.w !== w || L.vw !== window.innerWidth) {
         L.w = w; L.vw = window.innerWidth;
-        var sz = parseFloat(L.items[0].style.getPropertyValue('--s')) || 20, rx = Math.max(w / 2 + 6, sz * 2.4), ry = h * 1.0;
+        var sz = window.innerWidth >= 800 ? 36 : 30;
+        L.items.forEach(function (it) { it.style.setProperty('--s', sz + 'px'); });
+        var rx = w / 2 + sz * 0.95 + 20, ry = Math.max(h * 1.45, sz * 1.2);
         var P = [], len = [0], d = '', on = false;
         for (var k = 0; k <= 400; k++) {
           var t = k / 400 * Math.PI * 2, c = Math.cos(t), q = [rx * c, ry * Math.sin(t), Math.sin(t), Math.max(0, Math.min(1, (0.93 - Math.abs(c)) / 0.18))]; P.push(q);
@@ -42,8 +44,8 @@
       L.items.forEach(function (it, i) {
         var target = (((reduce ? 0 : now / 40000) + i / n) % 1) * T, lo = 0, hi = L.len.length - 1;
         while (hi - lo > 1) { var m = (lo + hi) >> 1; if (L.len[m] < target) lo = m; else hi = m; }
-        var q = L.P[lo], z = (q[2] + 1) / 2, s = 0.25 + 0.75 * g;
-        it.style.transform = 'translate(' + (q[0] * s).toFixed(1) + 'px,' + (q[1] * s).toFixed(1) + 'px) scale(' + ((0.86 + 0.14 * z) * (0.4 + 0.6 * g)).toFixed(3) + ')';
+        var q = L.P[lo], z = (q[2] + 1) / 2;
+        it.style.transform = 'translate(' + q[0].toFixed(1) + 'px,' + q[1].toFixed(1) + 'px) scale(' + ((0.92 + 0.08 * z) * (0.92 + 0.08 * g)).toFixed(3) + ')';
         it.style.opacity = ((0.92 + 0.08 * z) * q[3] * R).toFixed(3);
         it.style.zIndex = q[2] > 0 ? '3' : '1';
       });
