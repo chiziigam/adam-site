@@ -1663,5 +1663,51 @@ body.home .day-sticky { padding-top: 64px; }
 #make .sol-lead .sub { margin: 0 0 22px; max-width: none; font-size: 17px; line-height: 1.4; }
 .can-ico { width: 28px; height: 28px; display: block; margin: 0 0 14px; fill: none; stroke: var(--ink); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .can-lead { display: none; }
+
+/* refinement: quieter surfaces, one pill, flush hero */
+#make h1.hero-for { margin: 0 0 18px; text-align: left; }
+#make h1.hero-for .for-word { display: block; padding: 0; margin: 0; width: auto; text-align: left; text-indent: 0; }
+#make .sol-lead p.hero-h { margin: 0 0 22px; }
+.hero-cta { align-items: center; gap: 14px 18px; }
+.btn, .top .top-cta, .btn.hero-btn, .closing .signup button, .top.buy .top-cta {
+  min-height: 36px; height: 36px; padding: 0 16px; border: 0; border-radius: 980px;
+  background: var(--accd); color: #fff; font-size: 14px; line-height: 36px; font-weight: 400;
+  box-shadow: none; transform: none;
+}
+.btn:hover, .top .top-cta:hover, .btn.hero-btn:hover, .closing .signup button:hover, .top.buy .top-cta:hover {
+  background: #b8431a; border: 0; transform: none;
+}
+.btn:active, .top .top-cta:active { transform: none; }
+.signup { align-items: center; }
+.signup input[type="email"] { min-height: 36px; padding: 0 16px; border-radius: 980px; }
+.signup button { min-height: 36px; height: 36px; padding: 0 16px; line-height: 36px; }
+.hl { padding-top: clamp(88px, 12vw, 140px); padding-bottom: clamp(48px, 7vw, 80px); }
+.can { padding: clamp(96px, 12vw, 160px) 0 clamp(72px, 9vw, 120px); }
+.hearsec { padding-top: clamp(96px, 12vw, 150px); }
+#closer { padding-top: clamp(96px, 12vw, 150px); }
+.can-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
+.can-head h2 { margin: 0; }
+.can-nav { display: flex; gap: 8px; }
+.can-arrow { width: 36px; height: 36px; border: 0; border-radius: 50%; background: #e6e3db; color: var(--ink); font-size: 22px; line-height: 1; cursor: pointer; }
+.can-arrow:hover { background: #ddd9d0; }
+.can-scroller { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 2px; margin: 0; padding: 0 2px 8px; scrollbar-width: none; }
+.can-scroller::-webkit-scrollbar { display: none; }
+.can-card { position: relative; flex: 0 0 min(460px, 82vw); min-height: 420px; margin: 0; padding: 48px 40px; border: 0; border-radius: 28px; background: #fff; box-shadow: none; display: flex; align-items: flex-end; scroll-snap-align: start; }
+.can-say { margin: 0; max-width: 11em; font-size: clamp(32px, 2.8vw, 44px); line-height: 1.12; letter-spacing: -0.035em; font-weight: 500; color: var(--ink); }
+.can .ev-plus, .ev-plus { position: absolute; top: 28px; right: 28px; align-self: auto; width: 32px; height: 32px; border: 0; border-radius: 50%; background: #eceae4; color: #3a3834; }
+.can .ev-plus::before, .ev-plus::before { width: 11px; height: 1.25px; margin: -0.6px 0 0 -5.5px; }
+.can .ev-plus::after, .ev-plus::after { width: 1.25px; height: 11px; margin: -5.5px 0 0 -0.6px; }
+.can .ev-plus:hover, .ev-plus:hover { background: #e2dfd6; border: 0; }
+.can .ev-plus[aria-expanded="true"] { background: var(--ink); color: #fff; }
+.wk-static { margin-top: clamp(72px, 9vw, 112px); }
+.wk-static h3 { margin: 0 0 36px; font-size: clamp(28px, 3vw, 40px); font-weight: 500; letter-spacing: -0.03em; }
+.wk-logos { list-style: none; display: grid; grid-template-columns: repeat(6, 1fr); gap: 36px 24px; margin: 0; padding: 0; align-items: center; justify-items: center; }
+.wk-logos img { width: 48px; height: 48px; object-fit: contain; border-radius: 12px; opacity: 0.82; filter: saturate(0.85); }
+.hs-fall .hs-sound { color: var(--ink); }
+.hl-play { border: 0; background: #e6e3db; }
+.hl-play:hover { background: #ddd9d0; border: 0; }
+.ev-dialog { border-radius: 28px; box-shadow: 0 24px 80px rgba(32, 30, 27, 0.18); }
+.ev-x { width: 32px; height: 32px; background: #eceae4; font-size: 18px; }
+@media (max-width: 800px) { .wk-logos { grid-template-columns: repeat(4, 1fr); gap: 28px 16px; } .can-card { min-height: 340px; padding: 36px 28px; } }
 .ev-x:hover { background: var(--line); }
 @media (max-width: 720px) { .ev-card { min-height: 132px; } .ev-card h4 { font-size: 15px; } .ev-dialog { padding: 24px 20px 20px; } .ev-dialog h3 { font-size: 24px; } }
