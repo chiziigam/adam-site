@@ -1,11 +1,14 @@
 # Adam by Intuitive Devices
 
-> Adam is a £299 home speaker from Intuitive Devices, a UK start-up. It has microphones and sensors but no cameras. It hears what happens at home (a fall, smoke and CO alarms, a knock at the door, glass breaking, a baby crying), knows who is in which room, and tells the right person. It also gets things done for the household. No subscription needed. Website: https://www.heyintuitive.com/
+> Adam is a £299 smart speaker and home assistant from Intuitive Devices, a UK start-up. It does everything you expect from a smart speaker: music, smart home control, reminders, timers, calendar, questions and answers. It has microphones and sensors but no cameras. It also hears what happens at home (a fall, smoke and CO alarms, a knock at the door, glass breaking, a baby crying), knows who is in which room, and tells the right person. No subscription needed. Website: https://www.heyintuitive.com/
 
-Not to be confused with Intuitive Surgical, Intuit, or A.D.A.M. (adam-assistant.com).
+Not to be confused with Intuitive Surgical, Intuit, A.D.A.M. (adam-assistant.com), or Adam Audio (studio monitor speakers).
 
 ## Key facts
-- Product: Adam, the camera-free home speaker that hears a fall, a smoke alarm or a knock, and tells the right person.
+- Product: Adam, a camera-free smart speaker and home assistant that also hears a fall, a smoke alarm or a knock, and tells the right person.
+- Assistant: Adam is its own voice assistant. People can also keep the one they already use, such as ChatGPT, Gemini or Alexa.
+- Music and audio: Spotify and other music services, Bluetooth from your phone, radio and podcasts.
+- Smart home: controls smart lights, plugs and heating.
 - Price: £299 for everything in the box. No subscription. Test homes from the waitlist get £100 off (£199).
 - Availability: ships in the second half of 2027. Join the free waitlist at https://www.heyintuitive.com/#who
 - Colours: Charcoal, Chalk, Sand.
@@ -21,6 +24,9 @@ Not to be confused with Intuitive Surgical, Intuit, or A.D.A.M. (adam-assistant.
 - Who is in which room (the room, never your exact position)
 
 ## What Adam does
+- Plays music, radio and podcasts
+- Controls smart lights, plugs and heating
+- Answers questions, the weather, timers
 - Orders and books, with your OK
 - Sends messages and emails
 - Keeps the family calendar
