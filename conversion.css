@@ -1,0 +1,110 @@
+/* A shorter route from meeting Adam to joining the waitlist. */
+.conversion { --acc: #ba421b; --accd: #a63715; }
+.conversion .reveal, .conversion .mrise { opacity: 1; transform: none; }
+.conversion .top { min-height: 76px; }
+.conversion #make.card-sec { padding: 64px 0 56px; }
+.conversion #make > .wrap { display: grid; grid-template-columns: 1fr 1.05fr; align-items: center; gap: 32px; min-height: 0; }
+.conversion #make .sol-lead { margin: 0; max-width: 600px; }
+.conversion .hero-for, .eyebrow { font-size: 14px; line-height: 1.5; font-weight: 500; color: var(--accd); margin: 0 0 20px; }
+.conversion #make .sol-lead h1.hero-h { font-size: clamp(40px, 4.2vw, 62px); line-height: 1.04; font-weight: 500; letter-spacing: -.045em; max-width: 17ch; margin: 0 0 24px; text-wrap: balance; }
+.conversion #make .sub { font-size: 18px; line-height: 1.55; max-width: 43ch; margin: 0 0 28px; color: #59554e; }
+.conversion .signup-shell { margin: 0; }
+.conversion .signup { display: flex; gap: 8px; width: 100%; max-width: 540px; margin: 0; padding: 6px; border: 1px solid #cbc6bc; border-radius: 12px; background: #faf9f6; }
+.conversion .signup input[type=email] { flex: 1; width: 0; min-width: 0; min-height: 48px; padding: 10px 12px; border: 0; border-radius: 6px; background: transparent; color: var(--ink); font: inherit; font-size: 16px; }
+.conversion .signup input::placeholder { color: #6a655d; opacity: 1; }
+.conversion .signup input:focus { outline: 2px solid var(--acc); outline-offset: -2px; }
+.conversion .signup input[aria-invalid=true] { outline: 2px solid #a12e19; outline-offset: -2px; }
+.conversion .signup button { flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 14px; min-height: 48px; margin: 0; border: 0; border-radius: 8px; padding: 12px 18px; background: var(--acc); color: white; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; }
+.conversion .signup button:hover { background: var(--accd); }
+.conversion .signup button:disabled { cursor: default; opacity: .75; }
+.conversion .signup-msg { margin: 0; min-height: 0; font-size: 14px; line-height: 1.5; }
+.conversion .signup-msg:not(:empty) { margin-top: 10px; }
+.conversion .signup-msg.err { color: #a12e19; }
+.conversion .signup-note { margin: 10px 0 0; font-size: 13px; line-height: 1.5; color: #655f56; }
+.conversion #make .hero-price { margin: 24px 0 0; font-size: 14px; line-height: 1.6; color: #514c44; }
+.conversion .hero-price > span:not(.hero-ship) { margin: 0 4px; }
+.conversion .hero-ship { display: block; margin-top: 3px; font-size: 13px; }
+.conversion #make .product-wrap { margin: 0; align-self: center; }
+.conversion #make .product-hero:not(.open) .hero-view { aspect-ratio: 1.5; }
+.conversion #make .hero-assembled { object-fit: contain; object-position: center; mask-image: none; -webkit-mask-image: none; }
+.conversion #make .product-hero:not(.open) .hero-bar { justify-content: center; gap: 24px; margin: 12px 0 0; padding: 0; }
+.conversion #make .peek-ring, .conversion #make .taphint { display: none; }
+.conversion .product-caption { margin: 20px 0 0; text-align: center; font-size: 13px; line-height: 1.6; color: #6a655d; }
+.conversion .promise { padding: 28px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.conversion .vows { gap: 32px; }
+.conversion .vows li { font-size: 14px; line-height: 1.6; }
+.conversion .vows b { font-size: 16px; }
+.conversion .hearsec { padding: 72px 0; }
+.conversion .hs-title { font-size: clamp(32px, 4vw, 52px); max-width: 20ch; }
+.conversion .hs-list li { padding: 20px 0; }
+.conversion .hs-sound { font-size: clamp(24px, 2.6vw, 36px); }
+.conversion .hs-do { font-size: 16px; line-height: 1.55; }
+.conversion .hs-also { display: none; }
+.conversion .everyday { padding: 72px 0; border-bottom: 1px solid var(--line); }
+.everyday-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.everyday h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.06; letter-spacing: -.04em; font-weight: 500; margin: 0; max-width: 15ch; }
+.everyday p:not(.eyebrow) { font-size: 18px; line-height: 1.6; margin: 0 0 16px; max-width: 45ch; }
+.everyday .muted { color: #655f56; }
+.text-link { display: inline-flex; gap: 16px; font-size: 16px; font-weight: 500; color: var(--accd); padding: 8px 0; text-underline-offset: 5px; }
+.conversion .try-band { display: none; }
+.conversion #faq { padding: 64px 0; }
+.conversion #faq .head { margin-bottom: 24px; }
+.conversion #faq .faq { max-width: none; }
+.conversion #faq .acc-item { display: block; padding: 0; border-bottom: 1px solid var(--line); }
+.conversion #faq .acc-item h3 { margin: 0; }
+.conversion #faq .acc-q { display: flex; width: 100%; justify-content: space-between; align-items: center; padding: 20px 0; font-size: 17px; line-height: 1.4; text-align: left; cursor: pointer; pointer-events: auto; }
+.conversion #faq .pm { display: block; }
+.conversion #faq .acc-p { display: none !important; }
+.conversion #faq .acc-p.open { display: block !important; }
+html:not(.js) .conversion #faq .acc-p { display: block !important; }
+html:not(.js) .conversion .signup { display: none; }
+.conversion #faq .acc-p p { font-size: 16px; line-height: 1.6; padding: 0 0 20px; max-width: 65ch; }
+.conversion .closing { padding: 72px 0; }
+.conversion .closing h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1.08; margin-bottom: 16px; }
+.conversion .closing .sub { max-width: 36ch; margin: 0 auto 20px; font-size: 18px; line-height: 1.6; }
+.conversion .closing-price { color: #d1ccc2; font-size: 14px; line-height: 1.7; margin: 0 0 24px; }
+.conversion .closing .signup { margin: 0 auto; }
+.conversion .closing .signup-note { color: #d1ccc2; }
+.conversion .closing .signup-msg { color: #f4f2ed; max-width: 540px; margin-left: auto; margin-right: auto; }
+.conversion .closing .signup-msg.err { color: #ffbb9d; }
+.conversion .closing .fine { max-width: 48ch; font-size: 13px; line-height: 1.6; margin: 24px auto 0; color: #bfb9ae; }
+.conversion .day-stage::after { z-index: 1; pointer-events: none; }
+.conversion .day-stage > .day-card { z-index: 5; }
+@media (max-width: 999px) {
+  .conversion .top { min-height: 64px; padding: 14px 24px; }
+  .conversion .logo { font-size: 20px; }
+  .conversion .top-cta { font-size: 12px; padding: 10px 14px; }
+  .conversion #make.card-sec { padding: 28px 0 32px; }
+  .conversion #make > .wrap { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .conversion #make .sol-lead { display: contents; }
+  .conversion .hero-for { order: 1; margin: 0 0 12px; font-size: 12px; }
+  .conversion #make .sol-lead h1.hero-h { order: 2; font-size: clamp(31px, 6.2vw, 48px); max-width: 22ch; margin: 0; }
+  .conversion #make > .wrap > .product-wrap { order: 3; margin: 12px -12px 16px; align-self: stretch; }
+  .conversion #make .product-hero:not(.open) .hero-view { aspect-ratio: 2.3; }
+  .conversion #make .product-hero:not(.open) .hero-bar { margin-top: 0; gap: 20px; }
+  .conversion #make .hero-bar .swatch { width: 24px; height: 24px; }
+  .conversion #make .colour-name { font-size: 12px; }
+  .conversion .look-in { font-size: 12px; min-height: 36px; padding: 6px 12px; }
+  .conversion .product-caption { display: none; }
+  .conversion #make .sub { order: 4; font-size: 15px; line-height: 1.5; margin: 0 0 20px; max-width: 48ch; }
+  .conversion .signup-shell { order: 5; }
+  .conversion #make .hero-price { order: 6; margin-top: 18px; font-size: 12px; }
+  .conversion .hero-ship { font-size: 12px; }
+  .conversion .vows { gap: 20px; }
+  .conversion .hearsec, .conversion .everyday { padding: 48px 0; }
+  .everyday-grid { grid-template-columns: 1fr; gap: 24px; }
+  .everyday p:not(.eyebrow) { font-size: 16px; }
+  .conversion .day-sticky { height: auto; min-height: 760px; display: flex; flex-direction: column; background: var(--dbg); }
+  .conversion .day-stage { position: relative; inset: auto; height: 480px; flex: none; }
+  .conversion .day-top { z-index: 6; top: 24px; }
+  .conversion .day-stage > .day-card { bottom: 8px; left: 20px; width: min(290px, calc(100vw - 40px)); }
+  .conversion .day-foot { position: relative; z-index: 4; padding: 16px 24px 24px; background: var(--dbg); gap: 12px; }
+  .conversion .day-narr { font-size: 15px; line-height: 1.5; }
+}
+@media (max-width: 420px) {
+  .conversion .signup { flex-direction: column; gap: 4px; }
+  .conversion .signup input[type=email] { width: 100%; min-height: 42px; }
+  .conversion .signup button { width: 100%; min-height: 44px; }
+  .conversion .signup-note { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .conversion *, .conversion *::before, .conversion *::after { scroll-behavior: auto !important; } }
