@@ -17,7 +17,7 @@
 .conversion .signup button { flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 14px; min-height: 48px; margin: 0; border: 0; border-radius: 8px; padding: 12px 18px; background: var(--acc); color: white; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; }
 .conversion .signup button:hover { background: var(--accd); }
 .conversion .signup button:disabled { cursor: default; opacity: .75; }
-.conversion .signup-msg { margin: 0; min-height: 0; font-size: 14px; line-height: 1.5; }
+.conversion .signup-msg { margin: 0; min-height: 0; font-size: 14px; line-height: 1.5; color: var(--ink); }
 .conversion .signup-msg:not(:empty) { margin-top: 10px; }
 .conversion .signup-msg.err { color: #a12e19; }
 .conversion .signup-note { margin: 10px 0 0; font-size: 13px; line-height: 1.5; color: #655f56; }
