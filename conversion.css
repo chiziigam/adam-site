@@ -16,7 +16,10 @@
 .conversion .signup input[aria-invalid=true] { outline: 2px solid #a12e19; outline-offset: -2px; }
 .conversion .signup button { flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 14px; min-height: 48px; margin: 0; border: 0; border-radius: 8px; padding: 12px 18px; background: var(--acc); color: white; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; }
 .conversion .signup button:hover { background: var(--accd); }
-.conversion .signup button:disabled { cursor: default; opacity: .75; }
+.conversion .signup button[aria-disabled=true] { cursor: default; opacity: .75; }
+.conversion .signup .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.conversion .signup-msg a { color: inherit; text-underline-offset: 3px; }
+.conversion .signup-msg:focus { outline: none; }
 .conversion .signup-msg { margin: 0; min-height: 0; font-size: 14px; line-height: 1.5; color: var(--ink); }
 .conversion .signup-msg:not(:empty) { margin-top: 10px; }
 .conversion .signup-msg.err { color: #a12e19; }
@@ -68,6 +71,29 @@ html:not(.js) .conversion .signup { display: none; }
 .conversion .closing .signup-msg { color: #f4f2ed; max-width: 540px; margin-left: auto; margin-right: auto; }
 .conversion .closing .signup-msg.err { color: #ffbb9d; }
 .conversion .closing .fine { max-width: 48ch; font-size: 13px; line-height: 1.6; margin: 24px auto 0; color: #bfb9ae; }
+.conversion .top { z-index: 40; }
+.conversion .top .menu-toggle { display: none; flex: none; width: 44px; height: 44px; margin-left: 8px; }
+.conversion .top .menu-toggle span { left: 12px; top: 21px; }
+.mnav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(32, 30, 27, .08); }
+.mnav.open { display: block; }
+.mnav ul { list-style: none; margin: 0; padding: 8px 24px 16px; }
+.mnav li + li { border-top: 1px solid var(--line); }
+.mnav a { display: block; padding: 14px 0; font-size: 18px; line-height: 24px; font-weight: 500; color: var(--ink); text-decoration: none; }
+.mnav a:hover { color: var(--accd); }
+@media (max-width: 899px) { .conversion .top .menu-toggle { display: block; } .conversion .top .top-cta { margin-left: auto; } }
+html:not(.js) .conversion .top .menu-toggle { display: none; }
+@media (min-width: 900px) { .mnav, .mnav.open { display: none; } }
+.vows-link { margin-top: 16px; font-size: 14px; }
+.bounds { padding: 72px 0; border-bottom: 1px solid var(--line); }
+.bounds-head { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 80px; align-items: end; margin-bottom: 40px; }
+.bounds-head .eyebrow { grid-column: 1 / -1; margin: 0; }
+.bounds h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.06; letter-spacing: -.04em; font-weight: 500; margin: 0; max-width: 16ch; }
+.bounds-head p:not(.eyebrow) { font-size: 18px; line-height: 1.6; margin: 0; max-width: 45ch; color: #59554e; }
+.bounds-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; border-top: 1px solid var(--line); }
+.bounds-grid > div { padding: 24px 24px 28px 0; border-bottom: 1px solid var(--line); }
+.bounds-grid dt { font-size: 17px; line-height: 1.4; font-weight: 600; margin: 0 0 8px; }
+.bounds-grid dd { margin: 0; font-size: 15px; line-height: 1.6; color: #514c44; max-width: 36ch; }
+.bounds-note { margin: 24px 0 0; font-size: 14px; line-height: 1.6; color: #655f56; }
 .conversion .day-stage::after { z-index: 1; pointer-events: none; }
 .conversion .day-stage > .day-card { z-index: 5; }
 @media (max-width: 999px) {
@@ -93,6 +119,11 @@ html:not(.js) .conversion .signup { display: none; }
   .conversion .vows { gap: 20px; }
   .conversion .hearsec, .conversion .everyday { padding: 48px 0; }
   .everyday-grid { grid-template-columns: 1fr; gap: 24px; }
+  .bounds { padding: 48px 0; }
+  .bounds-head { grid-template-columns: 1fr; margin-bottom: 24px; }
+  .bounds-head p:not(.eyebrow) { font-size: 16px; }
+  .bounds-grid { grid-template-columns: 1fr; }
+  .bounds-grid > div { padding: 20px 0; }
   .everyday p:not(.eyebrow) { font-size: 16px; }
   .conversion .day-sticky { height: auto; min-height: 760px; display: flex; flex-direction: column; background: var(--dbg); }
   .conversion .day-stage { position: relative; inset: auto; height: 480px; flex: none; }
