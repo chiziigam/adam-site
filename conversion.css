@@ -81,6 +81,7 @@ html:not(.js) .conversion .signup { display: none; }
 .mnav a { display: block; padding: 14px 0; font-size: 18px; line-height: 24px; font-weight: 500; color: var(--ink); text-decoration: none; }
 .mnav a:hover { color: var(--accd); }
 @media (max-width: 899px) { .conversion .top .menu-toggle { display: block; } .conversion .top .top-cta { margin-left: auto; } }
+html:not(.js) .conversion .top .menu-toggle { display: none; }
 @media (min-width: 900px) { .mnav, .mnav.open { display: none; } }
 .vows-link { margin-top: 16px; font-size: 14px; }
 .bounds { padding: 72px 0; border-bottom: 1px solid var(--line); }
