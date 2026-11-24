@@ -21,7 +21,7 @@ function element(props = {}) {
 }
 let page;
 
-function load({ respond, onLine = true }) {
+function load({ respond, onLine = true, timer = setTimeout }) {
   const input = element({ type: 'email' });
   const company = element();
   const button = element();
@@ -40,7 +40,7 @@ function load({ respond, onLine = true }) {
     createTextNode: text => ({ textContent: text })
   };
   vm.runInNewContext(source, {
-    window: {}, document, fetch, URLSearchParams, URL, AbortController, setTimeout, clearTimeout, JSON, Object,
+    window: {}, document, fetch, URLSearchParams, URL, AbortController, setTimeout: timer, clearTimeout, JSON, Object,
     navigator: { doNotTrack: '1', onLine }, location: { search: '', hostname: 'www.heyintuitive.com' },
     crypto: { randomUUID: () => '12345678-1234-4234-8234-123456789abc' }, matchMedia: () => ({ matches: true })
   });
@@ -98,6 +98,12 @@ test('network failure while offline says so', async () => {
   const p = load({ onLine: false, respond: () => { throw new TypeError('Failed to fetch'); } });
   await submit(p, 'a@example.com');
   assert.match(text(p), /offline/);
+});
+
+test('a timeout while reading the reply is reported as a timeout', async () => {
+  const p = load({ respond: init => ({ ok: true, status: 200, json: () => new Promise((_, reject) => init.signal.addEventListener('abort', () => reject(new Error('aborted')))) }), timer: fn => setTimeout(fn, 0) });
+  await submit(p, 'a@example.com');
+  assert.match(text(p), /taking too long/);
 });
 
 test('success confirms, locks the form and moves focus to the confirmation', async () => {

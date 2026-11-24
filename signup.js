@@ -85,7 +85,7 @@
         var response = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, signal: controller.signal,
           body: JSON.stringify({ email: email, company: form.querySelector('[name="company"]').value, placement: placement, tracking: allowed, attribution: attribution }) });
         var data = null;
-        try { data = await response.json(); } catch (_) {}
+        try { data = await response.json(); } catch (error) { if (timedOut) throw error; }
         if (!response.ok || !data || !data.ok) kind = failure(response.status);
       } catch (_) {
         kind = timedOut ? 'timeout' : navigator.onLine === false ? 'offline' : 'save';
